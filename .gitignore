@@ -1,0 +1,21 @@
+# Node modules
+node_modules/
+
+# Vercel deployment config (shouldn't be tracked)
+.vercel/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+Thumbs.db
