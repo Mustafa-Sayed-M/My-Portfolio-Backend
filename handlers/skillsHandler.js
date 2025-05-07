@@ -13,6 +13,9 @@ const getSkillsCollection = async () => {
 // ==========
 // # GET:
 export const GET_ALL_SKILLS = async (_, res) => {
+    // Allow Access:
+    res.setHeader("Access-Control-Allow-Origin", "*");
+
     const skillsCollection = await getSkillsCollection();
 
     try {
@@ -23,6 +26,9 @@ export const GET_ALL_SKILLS = async (_, res) => {
     }
 };
 export const GET_SINGLE_SKILL = async (req, res) => {
+    // Allow Access:
+    res.setHeader("Access-Control-Allow-Origin", "*");
+
     const skillsCollection = await getSkillsCollection();
 
     const { id } = req.query;
@@ -50,6 +56,9 @@ export const GET_SINGLE_SKILL = async (req, res) => {
 // ==========
 // # DELETE
 export const DELETE_ALL_SKILLS = async (_, res) => {
+    // Allow Access:
+    res.setHeader("Access-Control-Allow-Origin", "*");
+
     const skillsCollection = await getSkillsCollection();
 
     try {
@@ -62,6 +71,9 @@ export const DELETE_ALL_SKILLS = async (_, res) => {
     }
 };
 export const DELETE_SINGLE_SKILL = async (req, res) => {
+    // Allow Access:
+    res.setHeader("Access-Control-Allow-Origin", "*");
+
     const skillsCollection = await getSkillsCollection();
 
     const { id } = req.query;

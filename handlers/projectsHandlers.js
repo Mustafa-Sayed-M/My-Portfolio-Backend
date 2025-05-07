@@ -12,7 +12,10 @@ const getProjectsCollection = async () => {
 
 // ==========
 // # GET:
-export const GET_ALL_PROJECTS = async (_, res) => {
+export const GET_ALL_PROJECTS = async (req, res) => {
+    // Allow Access:
+    res.setHeader("Access-Control-Allow-Origin", "*");
+
     const projectsCollection = await getProjectsCollection();
 
     try {
@@ -23,6 +26,9 @@ export const GET_ALL_PROJECTS = async (_, res) => {
     }
 };
 export const GET_SINGLE_PROJECT = async (req, res) => {
+    // Allow Access:
+    res.setHeader("Access-Control-Allow-Origin", "*");
+
     const projectsCollection = await getProjectsCollection();
 
     const { id } = req.query;
@@ -50,6 +56,9 @@ export const GET_SINGLE_PROJECT = async (req, res) => {
 // ==========
 // # DELETE
 export const DELETE_ALL_PROJECTS = async (_, res) => {
+    // Allow Access:
+    res.setHeader("Access-Control-Allow-Origin", "*");
+
     const projectsCollection = await getProjectsCollection();
 
     try {
@@ -62,6 +71,9 @@ export const DELETE_ALL_PROJECTS = async (_, res) => {
     }
 };
 export const DELETE_SINGLE_PROJECT = async (req, res) => {
+    // Allow Access:
+    res.setHeader("Access-Control-Allow-Origin", "*");
+
     const projectsCollection = await getProjectsCollection();
 
     const { id } = req.query;

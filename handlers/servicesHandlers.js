@@ -13,6 +13,9 @@ const getServicesCollection = async () => {
 // ==========
 // # GET:
 export const GET_ALL_SERVICES = async (_, res) => {
+    // Allow Access:
+    res.setHeader("Access-Control-Allow-Origin", "*");
+
     const servicesCollection = await getServicesCollection();
 
     try {
@@ -23,6 +26,9 @@ export const GET_ALL_SERVICES = async (_, res) => {
     }
 };
 export const GET_SINGLE_SERVICE = async (req, res) => {
+    // Allow Access:
+    res.setHeader("Access-Control-Allow-Origin", "*");
+
     const servicesCollection = await getServicesCollection();
 
     const { id } = req.query;
@@ -50,6 +56,9 @@ export const GET_SINGLE_SERVICE = async (req, res) => {
 // ==========
 // # DELETE
 export const DELETE_ALL_SERVICES = async (_, res) => {
+    // Allow Access:
+    res.setHeader("Access-Control-Allow-Origin", "*");
+
     const servicesCollection = await getServicesCollection();
 
     try {
@@ -62,6 +71,9 @@ export const DELETE_ALL_SERVICES = async (_, res) => {
     }
 };
 export const DELETE_SINGLE_SERVICE = async (req, res) => {
+    // Allow Access:
+    res.setHeader("Access-Control-Allow-Origin", "*");
+
     const servicesCollection = await getServicesCollection();
 
     const { id } = req.query;
