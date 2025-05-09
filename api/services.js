@@ -3,7 +3,7 @@ import {
     DELETE_SINGLE_SERVICE,
     GET_ALL_SERVICES,
     GET_SINGLE_SERVICE,
-} from "../handlers/servicesHandlers.js";
+} from "../handlers/servicesHandler.js";
 
 export default async function handler(req, res) {
     const { method } = req;

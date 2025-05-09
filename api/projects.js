@@ -3,7 +3,7 @@ import {
     DELETE_SINGLE_PROJECT,
     GET_ALL_PROJECTS,
     GET_SINGLE_PROJECT,
-} from "../handlers/projectsHandlers.js";
+} from "../handlers/projectsHandler.js";
 
 export default async function handler(req, res) {
     const { method } = req;
